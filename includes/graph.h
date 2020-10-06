@@ -6,14 +6,13 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 11:59:05 by npimenof          #+#    #+#             */
-/*   Updated: 2020/10/05 17:01:30 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/10/06 11:35:52 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GRAPH_H
 # define GRAPH_H
 # include "libft.h"
-# include "ft_hash.h"
 # define IDENT_MAX 256
 
 typedef struct		s_adjlist
