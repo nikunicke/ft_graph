@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/10/05 17:12:10 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/10/06 15:16:09 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_adjlist	init_adjlist(size_t s)
 	return (adj);
 }
 
-t_graph	*init_graph(int vertices)
+t_graph	*init_graph(size_t vertices)
 {
 	t_graph	*g;
 
