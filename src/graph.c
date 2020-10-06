@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/10/05 17:12:10 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/10/06 18:12:06 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ inline t_adjlist *to_adj(t_graph *g)
 
 size_t		get_node_index(t_node *n)
 {
-	return (n->x);
+	return (n->i);
 }
 
 t_edge		*new_edge(t_node *from, t_node *to, int capacity)
@@ -36,6 +36,21 @@ t_edge		*new_edge(t_node *from, t_node *to, int capacity)
 	edge->flow = 0;
 	edge->residual = NULL;
 	return (edge);
+}
+
+t_node	*new_node(void *id)
+{
+	t_node	*node;
+	static size_t	i;
+
+	if (!(node = malloc(sizeof(t_node))))
+		return (NULL);
+	node->id = id;
+	node->i = i;
+	node->x = 0;
+	node->y = 0;
+	i++;
+	return (node);
 }
 
 t_adjlist	init_adjlist(size_t s)
@@ -78,8 +93,8 @@ int		add_edge(t_graph *g, t_node *s, t_node *d)
 	from->residual = to;
 	to->residual = from;
 	a = (t_adjlist *)g;
-	ft_lstadd(&a->list[s->x], ft_lstcontent(to));
-	ft_lstadd(&a->list[d->x], ft_lstcontent(from));
+	ft_lstadd(&a->list[s->i], ft_lstcontent(to));
+	ft_lstadd(&a->list[d->i], ft_lstcontent(from));
 	return (0);
 }
 
