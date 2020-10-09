@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/10/06 18:17:41 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/10/09 15:06:54 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ t_edge		*new_edge(t_node *from, t_node *to, int capacity)
 
 t_node	*new_node(void *id)
 {
-	t_node	*node;
 	static size_t	i;
+	t_node			*node;
 
 	if (!(node = malloc(sizeof(t_node))))
 		return (NULL);
