@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 11:59:05 by npimenof          #+#    #+#             */
-/*   Updated: 2020/10/06 18:17:27 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/10/14 17:33:09 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct		s_node
 	int				i;
 	int				x;
 	int				y;
+	int				token;
 }					t_node;
 
 typedef struct		s_edge

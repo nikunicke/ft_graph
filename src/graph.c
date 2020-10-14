@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/10/09 15:06:54 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/10/14 17:33:26 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ t_node	*new_node(void *id)
 	node->i = i;
 	node->x = 0;
 	node->y = 0;
+	node->token = 0;
 	i++;
 	return (node);
 }
@@ -96,9 +97,4 @@ int		add_edge(t_graph *g, t_node *s, t_node *d)
 	ft_lstadd(&a->list[s->i], ft_lstcontent(to));
 	ft_lstadd(&a->list[d->i], ft_lstcontent(from));
 	return (0);
-}
-
-void	hello(void)
-{
-	printf("Hello World\n");
 }
