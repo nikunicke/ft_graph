@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/10/14 17:33:26 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/10/27 10:56:15 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ t_node	*new_node(void *id)
 	node->x = 0;
 	node->y = 0;
 	node->token = 0;
+	node->in = 0;
 	i++;
 	return (node);
 }
