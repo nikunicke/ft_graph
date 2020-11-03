@@ -15,7 +15,7 @@ INCL = ./includes
 
 all: $(NAME)
 
-$(NAME): $(SRC) $(INCL)/graph.h
+$(NAME): $(SRC) $(INCL)/ft_graph.h
 	make -C ./libft
 	gcc $(FLAGS) -c $(SRC) -I./libft/includes -I$(INCL) 
 	ar -x libft/libft.a $(LIBFTOBJ)

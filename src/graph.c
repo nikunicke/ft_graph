@@ -6,13 +6,13 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/10/27 10:56:15 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/11/03 15:09:10 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "graph.h"
+#include "ft_graph.h"
 
 inline t_adjlist *to_adj(t_graph *g)
 {
