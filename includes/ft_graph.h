@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 11:59:05 by npimenof          #+#    #+#             */
-/*   Updated: 2020/11/03 15:10:36 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/11/05 14:56:48 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,7 @@ typedef struct		s_edge
 }					t_edge;
 
 t_graph				*init_graph(size_t vertices);
-t_adjlist			*to_adj(t_graph *g);
 t_node				*new_node(void *id);
-size_t				get_node_index(t_node *n);
 int					add_edge(t_graph *g, t_node *s, t_node *d);
-void				hello(void);
 
 #endif

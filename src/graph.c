@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/11/03 15:09:10 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/11/05 14:58:22 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,7 @@
 #include <stdlib.h>
 #include "ft_graph.h"
 
-inline t_adjlist *to_adj(t_graph *g)
-{
-	return ((t_adjlist *)g);
-}
-
-size_t		get_node_index(t_node *n)
-{
-	return (n->i);
-}
-
-t_edge		*new_edge(t_node *from, t_node *to, int capacity)
+static t_edge		*new_edge(t_node *from, t_node *to, int capacity)
 {
 	t_edge	*edge;
 
@@ -38,7 +28,7 @@ t_edge		*new_edge(t_node *from, t_node *to, int capacity)
 	return (edge);
 }
 
-t_node	*new_node(void *id)
+t_node				*new_node(void *id)
 {
 	static size_t	i;
 	t_node			*node;
@@ -55,32 +45,32 @@ t_node	*new_node(void *id)
 	return (node);
 }
 
-t_adjlist	init_adjlist(size_t s)
+static t_adjlist	init_adjlist(size_t s)
 {
 	t_adjlist	adj;
 
 	if (!(adj.list = malloc(sizeof(t_list *) * s)))
-		return adj;
+		return (adj);
 	ft_bzero(adj.list, s);
 	adj.size = s;
 	adj.used = 0;
 	return (adj);
 }
 
-t_graph	*init_graph(size_t vertices)
+t_graph				*init_graph(size_t vertices)
 {
 	t_graph	*g;
 
 	if (!(g = malloc(sizeof(t_graph))))
 		return (NULL);
 	g->adj = init_adjlist(vertices);
-	if (!(to_adj(g)->list))
+	if (!(((t_adjlist *)g)->list))
 		return (NULL);
 	g->vertices = vertices;
 	return (g);
 }
 
-int		add_edge(t_graph *g, t_node *s, t_node *d)
+int					add_edge(t_graph *g, t_node *s, t_node *d)
 {
 	t_adjlist	*a;
 	t_edge		*to;
