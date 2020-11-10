@@ -6,12 +6,10 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/11/05 14:58:22 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/11/10 13:17:22 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "ft_graph.h"
 
 static t_edge		*new_edge(t_node *from, t_node *to, int capacity)
