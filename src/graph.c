@@ -6,7 +6,7 @@
 /*   By: npimenof <npimenof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 12:25:23 by npimenof          #+#    #+#             */
-/*   Updated: 2020/11/10 13:17:22 by npimenof         ###   ########.fr       */
+/*   Updated: 2020/11/19 16:14:07 by npimenof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,8 @@ static t_adjlist	init_adjlist(size_t s)
 {
 	t_adjlist	adj;
 
-	if (!(adj.list = malloc(sizeof(t_list *) * s)))
+	if (!(adj.list = ft_memalloc(sizeof(t_list *) * s)))
 		return (adj);
-	ft_bzero(adj.list, s);
 	adj.size = s;
 	adj.used = 0;
 	return (adj);
@@ -59,7 +58,7 @@ t_graph				*init_graph(size_t vertices)
 {
 	t_graph	*g;
 
-	if (!(g = malloc(sizeof(t_graph))))
+	if (!(g = ft_memalloc(sizeof(t_graph))))
 		return (NULL);
 	g->adj = init_adjlist(vertices);
 	if (!(((t_adjlist *)g)->list))
